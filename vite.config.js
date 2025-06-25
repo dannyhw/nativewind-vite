@@ -8,6 +8,8 @@ export default defineConfig({
       jsxImportSource: "nativewind",
       jsxRuntime: "automatic",
       babel: {
+        configFile: false,
+        babelrc: false,
         plugins: [
           [
             "@babel/plugin-transform-react-jsx",

@@ -1,4 +1,4 @@
-import nativewind from "nativewind/preset";
+// import nativewind from "nativewind/preset";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {},
   },
-
-  presets: [nativewind],
+  important: "html",
+  // eslint-disable-next-line no-undef
+  presets: [require("nativewind/preset")],
   plugins: [],
 };
