@@ -8,6 +8,7 @@ export default defineConfig({
       jsxImportSource: "nativewind",
       jsxRuntime: "automatic",
       babel: {
+        presets: ["nativewind/babel"],
         plugins: [
           [
             "@babel/plugin-transform-react-jsx",
@@ -30,9 +31,14 @@ export default defineConfig({
 
     "process.env.NODE_ENV": JSON.stringify(true),
   },
+  esbuild: {
+    jsxImportSource: "nativewind",
+    jsx: "automatic",
+  },
   optimizeDeps: {
     esbuildOptions: {
       jsx: "automatic",
+      jsxImportSource: "nativewind",
       resolveExtensions: [
         ".web.js",
         ".web.ts",
